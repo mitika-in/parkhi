@@ -1,0 +1,35 @@
+{
+  "name": "@mitika-in/parkhi",
+  "version": "0.1.0",
+  "description": "Extract metadata from media files.",
+  "keywords": ["audio", "media", "metadata", "parser", "video"],
+  "homepage": "https://github.com/mitika-in/parkhi#readme",
+  "bugs": {
+    "url": "https://github.com/mitika-in/parkhi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitika-in/parkhi.git"
+  },
+  "license": "MIT",
+  "author": "Mitika Team",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/release/src/index.js",
+      "types": "./dist/release/src/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build:debug": "tsc --project tsconfig.debug.json",
+    "build:release": "tsc --project tsconfig.release.json",
+    "prepare": "npm run build:release",
+    "test": "node --test 'dist/**/*.test.js'"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^25.2.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  }
+}
